@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[7.0]
-  def change
+class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[7.0] # :nodoc:
+  def change 
     create_table(:users) do |t|
       t.string :provider, null: false, default: 'email'
       t.string :uid, null: false, default: ''

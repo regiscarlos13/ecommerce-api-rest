@@ -14,7 +14,7 @@ Metrics/CyclomaticComplexity:
 # Offense count: 2
 # Configuration parameters: CountComments, CountAsOne, ExcludedMethods, IgnoredMethods.
 Metrics/MethodLength:
-  Max: 12
+  Max: 30
 
 # Offense count: 1
 # Configuration parameters: IgnoredMethods.
@@ -41,6 +41,12 @@ Style/IfUnlessModifier:
 # URISchemes: http, https
 Layout/LineLength:
   Max: 198
+
+Metrics/AbcSize:
+  Max: 50
   
 Metrics/BlockLength:
   IgnoredMethods: ['describe', 'context']
+  Exclude:
+    - db/schema.rb
+  Max: 50

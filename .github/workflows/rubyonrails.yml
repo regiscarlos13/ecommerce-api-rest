@@ -15,7 +15,6 @@ jobs:
 
       - name: Analyze code
         run: bundle exec rubocop
-    
   rspec:
     name: RSpec
     needs: rubocop
@@ -43,7 +42,7 @@ jobs:
 
       - name: Install postgres client dependencies
         run: sudo apt-get install libpq-dev
- 
+      
       - name: Create database
         run: |
           bundle exec rails db:create
@@ -54,5 +53,5 @@ jobs:
           # Se o projeto não usar nenhum dos dois
           bundle exec rails db:migrate
 
-    - name: Run tests
-      run: bundle exec rspec spec
+      - name: Run tests
+        run: bundle exec rspec spec

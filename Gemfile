@@ -29,4 +29,4 @@ group :development do
   gem 'rubocop', '~> 1.25'
 end
 
-gem "rack-cors", "~> 1.1"
+gem 'rack-cors', '~> 1.1'

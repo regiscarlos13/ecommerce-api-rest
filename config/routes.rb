@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   namespace :admin do
     namespace :v1 do
       get 'home' => 'home#index'
-      resources :categories
-      resources :coupons
+      resources :categories, except: %i[new]
+      resources :coupons, except: %i[new]
+      resources :users, except: %i[new]
+      resources :system_requirements, except: %i[new]
     end
   end
 

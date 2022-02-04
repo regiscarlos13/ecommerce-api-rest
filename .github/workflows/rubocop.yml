@@ -1,7 +1,7 @@
 name: Rubocop
 
 env:
-  RUBY_VERSION: 3.0.1
+  RUBY_VERSION: 3.1.0
 
 on: [pull_request]
 
@@ -16,11 +16,3 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ env.RUBY_VERSION }}
-
-      - name: ReviewDog Report
-        uses: reviewdog/action-rubocop@v1
-        with:
-          rubocop_version: gemfile
-          rubocop_extensions: rubocop-rails:gemfile rubocop-rspec:gemfile
-          github_token: ${{ secrets.github_token }}
-          rubocop_flags: --config=.rubocop.yml# This workflow uses actions that are not certified by GitHub.

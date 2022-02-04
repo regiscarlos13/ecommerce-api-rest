@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Coupon < ApplicationRecord
+  include NameSearchable
+  include Paginatable
   validates :name, presence: true
   validates :code, presence: true, uniqueness: { case_sensitive: false }
   validates :status, presence: true
